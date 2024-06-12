@@ -1,6 +1,9 @@
 const button = document.querySelector("button");
 const url = 'https://bored.api.lewagon.com/api/activity';
+const audio = new Audio();
+audio.src = "./sound.mp3"
 button.addEventListener("click", () => { 
+    audio.play();
     const results = document.querySelector("#results")
     const activity = document.querySelector(".activity")
     const price = document.querySelector(".price")
