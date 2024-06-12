@@ -9,14 +9,14 @@ button.addEventListener("click", () => {
     .then(response => response.json())
     .then(data => {
         results.classList.remove("invisible")
-        activity.innerHTML = data.activity;
+        activity.innerHTML = "You can " + data.activity;
         if (data.participants==1){
-            people.innerHTML = "you can do this by yourslef!"
+            people.innerHTML = "You can do this by yourslef!"
         }
         else{
             people.innerHTML = "you can do this with " + data.participants + " people"
         }
-        price.innerHTML =data.price + "$"
+        price.innerHTML ="It'll cost you " + data.price + "$"
     })
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 })
